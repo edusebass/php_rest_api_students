@@ -6,16 +6,10 @@ use App\Http\Controllers\Api\studentController;
 
 Route::get('/students', [studentController::class, 'index']);
 
-Route::get('/students/{id}', function () {
-    return "Obteniendo estudiante en especifico";
-});
+Route::get('/students/{id}', [studentController::class, 'show']);
 
 Route::post('/students', [studentController::class, 'store']);
 
-Route::put('/students/{id', function () {
-    return "Editando estudiantes";
-});
+Route::put('/students/{id}', [studentController::class, 'update']);
 
-Route::delete('/students({id}', function () {
-    return "Eliminando estudiantes";
-});
+Route::delete('/students/{id}', [studentController::class, 'destroy']);
