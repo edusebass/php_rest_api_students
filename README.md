@@ -23,3 +23,7 @@ php migrate
 ## Crear modelo
 
 php aritsan make:model Student
+
+## Crear un controlador en base a una carpeta
+
+php artisan make:controller Api/studentController
